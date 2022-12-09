@@ -14,7 +14,7 @@
 #define PIN_ST 14 // Start button,  keyboard Right Shift
 #define PIN_SP 15 // Star power,    keyboard Delete
 
-#define DEBOUNCE_TIME 50
+#define DEBOUNCE_TIME 20
 
 byte buttons[9] = {PIN_1, PIN_2, PIN_3, PIN_4, PIN_5, PIN_SU, PIN_SD, PIN_ST, PIN_SP};
 
@@ -29,7 +29,7 @@ char keyboardKeys[BUTTON_COUNT] = {
 
 void setup() {
   // Serial for debug
-  Serial.begin(9600);
+  Serial.begin(115200);
   // Set all buttons pin mode to INPUT
   // and set them to HIGH
   for(int i = 0; i < BUTTON_COUNT; i++) {
